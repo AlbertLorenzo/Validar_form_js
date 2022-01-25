@@ -22,7 +22,7 @@ class Email {
     }
 
     init() {
-        emailjs.init("user_vAsPQFbJVu7Y0Cf095hoP");
+        emailjs.init("id");
     }
 
     send() {
