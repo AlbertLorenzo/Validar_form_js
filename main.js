@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formObject.clearSpans();
 
         if (formObject.handleEmptyFields()) {
-            const email = new Email();
-            email.init();
+            const email = Email.getInstance();
             email.setEmailData(formObject.getFormInputs());
             email.send();
         }
