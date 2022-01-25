@@ -2,27 +2,31 @@ class Email {
 
     #dataTemplate = {};
 
-    constructor() {
-        if (Email._instance) {
-            return Email._instance;
+    constructor(Email) {
+        this._instance = null;
+        this.#init();
+    }
+
+    static getInstance() {
+        if (!this._instance) {
+            this._instance = new Email(this);
         }
-        Email._instance = this;
+        return this._instance;
+    }
+
+    #init() {
+        emailjs.init("user_vAsPQFbJVu7Y0Cf095hoP");
     }
 
     setEmailData(arr) {
         const labels = ['source', 'target', 'message']
         labels.forEach((e, i) => {
-            console.log(arr[i].value);
             this.#dataTemplate[`${e}`] = arr[i].value;
         });
     }
 
     getDataTemplate() {
         return this.#dataTemplate;
-    }
-
-    init() {
-        emailjs.init("id");
     }
 
     send() {
