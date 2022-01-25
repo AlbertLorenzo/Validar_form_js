@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo validación formulario</title>
+    <script src="formClass.js"></script>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script src="mailClass.js"></script>
+</head>
+
+<body>
+    <form action="" name="u-form" id="u-form">
+
+        <label for="lb-i-from-name">Email origen:</label><br>
+        <input type="text" name="i-from-name" placeholder="E-mail destino"><br>
+        <span id="sp-i-from-name"></span><br><br>
+
+        <label for="lb-i-to-name">Email destino estino:</label><br>
+        <input type="text" name="i-to-name" placeholder="E-mail destino"><br>
+        <span id="sp-i-to-name"></span><br><br>
+
+        <label for="lb-i-message">Mensaje:</label><br>
+        <input type="text" name="i-message" placeholder="Mensaje"><br>
+        <span id="sp-i-message"></span><br><br>
+
+        <input type="submit" name="i-submit" value="Enviar">
+    </form>
+</body>
+
+</html>
